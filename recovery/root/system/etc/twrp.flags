@@ -1,0 +1,15 @@
+# Mount point       Fstype        Device                          Device2                            Flags
+/boot               emmc          /dev/block/bootdevice/by-name/boot                             flags=backup=1;flashimg=1;display="Boot"
+/dtbo               emmc          /dev/block/bootdevice/by-name/dtbo                             flags=backup=1;flashimg=1;display="Dtbo"
+/recovery           emmc          /dev/block/bootdevice/by-name/recovery                         flags=backup=1;flashimg=1;display="Recovery"
+
+# Dynamic partitions (flash + wipe)
+/system_image       emmc          /dev/block/mapper/system                          flags=backup=1;flashimg=1;wipeingui;logical;display="System"
+/system_ext         emmc          /dev/block/mapper/system_ext                       flags=backup=1;flashimg=1;wipeingui;logical;display="System_EXT"
+/product            emmc          /dev/block/mapper/product                          flags=backup=1;flashimg=1;wipeingui;logical;display="Product"
+/vendor             emmc          /dev/block/mapper/vendor                           flags=backup=1;flashimg=1;wipeingui;logical;display="Vendor"
+
+# Removable storage
+/storage            auto          /data/media/0                                      flags=backup=1;display="Internal Storage";usermrf;fsflags="bind,utf8";removable
+/external_sd        auto          /dev/block/mmcblk1p1    /dev/block/mmcblk1          flags=display="Micro SD card";storage;wipeingui;removable
+/usb-otg            auto          /dev/block/sda1         /dev/block/sda              flags=display="USB-OTG";storage;wipeingui;removable
