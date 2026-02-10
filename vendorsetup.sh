@@ -36,3 +36,4 @@ export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/by-name/vendor"
 export FOX_RECOVERY_SYSTEM_EXT_PARTITION="/dev/block/mapper/by-name/system_ext"
 export FOX_RECOVERY_PRODUCT_PARTITION="/dev/block/mapper/by-name/product"
 export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
+export OF_USE_LZMA_COMPRESSION=1
