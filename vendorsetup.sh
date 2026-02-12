@@ -34,6 +34,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_DATE_BINARY=1
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
+	export FOX_RECOVERY_SYSTEM_EXT_PARTITION="/dev/block/mapper/system_ext"
+	export FOX_RECOVERY_PRODUCT_PARTITION="/dev/block/mapper/product"
 	export FOX_DELETE_INITD_ADDON=1
 	export FOX_DELETE_AROMAFM=1
 	export FOX_USE_BUSYBOX_BINARY=1
