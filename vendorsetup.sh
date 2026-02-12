@@ -22,7 +22,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
 	export ALLOW_MISSING_DEPENDENCIES=true
-	export FOX_VANILLA_BUILD=1
+	export FOX_VANILLA_BUILD=0
 	export FOX_NO_SAMSUNG_SPECIAL=1
 	export FOX_ENABLE_APP_MANAGER=1
 	export FOX_USE_BASH_SHELL=1
@@ -36,9 +36,15 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export FOX_RECOVERY_SYSTEM_EXT_PARTITION="/dev/block/mapper/system_ext"
 	export FOX_RECOVERY_PRODUCT_PARTITION="/dev/block/mapper/product"
+	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/by-name/boot"
+	export FOX_RECOVERY_RECOVERY_PARTITION="/dev/block/by-name/recovery"
+	export FOX_RECOVERY_DTBO_PARTITION="/dev/block/by-name/dtbo"
+	export FOX_RECOVERY_VBMETA_PARTITION="/dev/block/by-name/vbmeta"
+	export FOX_RECOVERY_VBMETA_SYSTEM_PARTITION="/dev/block/by-name/vbmeta_system"
 	export FOX_DELETE_INITD_ADDON=1
 	export FOX_DELETE_AROMAFM=1
 	export FOX_USE_BUSYBOX_BINARY=1
+	export FOX_DELETE_MAGISK_ADDON=1
 else
 	if [ -z "$FOX_BUILD_DEVICE" -a -z "$BASH_SOURCE" ]; then
 		echo "I: This script requires bash. Not processing the $FDEVICE $(basename $0)"
