@@ -146,5 +146,4 @@ TW_DEFAULT_BRIGHTNESS := 160
 TARGET_USES_VULKAN := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/sprd_backlight/brightness"
 
-# Maintainer name
-TW_DEVICE_VERSION := DevCat3
+PB_OFFICIAL := true
