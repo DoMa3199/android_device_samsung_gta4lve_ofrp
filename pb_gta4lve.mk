@@ -16,7 +16,7 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/samsung/gta4lve/device.mk)
 
 PRODUCT_DEVICE := gta4lve
-PRODUCT_NAME := twrp_gta4lve
+PRODUCT_NAME := pb_gta4lve
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T509
 PRODUCT_MANUFACTURER := samsung
